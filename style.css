@@ -63,6 +63,6 @@ body {
   color: #bbb;
 }
 body.game-active {
-  background: url("20220728.jpg") no-repeat center center fixed;
+  background: url("background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
