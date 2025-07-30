@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mysterious Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu-screen">
+    <h1>Mysterious Adventure</h1>
+    <button id="start-button">Play</button>
+    <div id="menu-controls">
+      <button id="load-button">Load Game</button>
+      <button id="save-button">Save Game</button>
+    </div>
+    <p id="credits">Credits: Elite-ak-21 and Oneill</p>
+  </div>
+
+  <div id="game-container" style="display: none;">
+    <div id="dialogue-box">
+      <p id="character-name"></p>
+      <p id="dialogue-text"></p>
+    </div>
+    <div id="controls">
+      <button id="next-button">Next</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
