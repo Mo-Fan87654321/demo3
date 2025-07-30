@@ -21,10 +21,13 @@ function showDialogue(index) {
   if (index < story.length) {
     nameEl.textContent = story[index].name;
     textEl.textContent = story[index].text;
+    nextBtn.disabled = false;
+    saveBtn.disabled = false;
   } else {
     nameEl.textContent = "";
     textEl.textContent = "[End of Demo]";
     nextBtn.disabled = true;
+    saveBtn.disabled = true;
   }
 }
 
@@ -41,6 +44,7 @@ saveBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", () => {
   menuScreen.style.display = "none";
   gameContainer.style.display = "block";
+  document.body.classList.add("game-active"); // Add background
   currentIndex = 0;
   nextBtn.disabled = false;
   showDialogue(currentIndex);
@@ -52,9 +56,10 @@ loadBtn.addEventListener("click", () => {
     currentIndex = parseInt(savedIndex);
     menuScreen.style.display = "none";
     gameContainer.style.display = "block";
+    document.body.classList.add("game-active"); // Add background
     showDialogue(currentIndex);
     alert("Game loaded!");
   } else {
     alert("No save data found.");
-  }
+  }
 });
